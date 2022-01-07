@@ -1,0 +1,26 @@
+<idea-plugin>
+    <id>org.example.first-plugin</id>
+    <name>HelloPlugin</name>
+    <vendor email="hejian@fox.com" url="http://www.tojaoomy.com">tojaoomy</vendor>
+
+    <description>
+        没有开发过 IDEA 插件的小伙伴直接看这两个配置文件内容可能会有点蒙。所以，我专门找了一个 IDEA 插件市场提供的现成插件来说明一下。小伙伴们对照下面这张图来看下面的配置文件内容就非常非常清晰了。
+    </description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <idea-version since-build="202"/>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="hello" class="HelloAction" text="hello" description="hello world">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
